@@ -1,15 +1,37 @@
+from __future__ import print_function
+
+import sys
 import time
 import threading
 from io import BytesIO
 
-from PIL import Image
-import cv2
-from wand.image import Image as WandImage
-from pgmagick import Image as PGImage, FilterTypes, Blob, Geometry
-from pyvips import Image as VipsImage
+try:
+    from PIL import Image
+except ImportError:
+    Image = None
+try:
+    import cv2
+except ImportError:
+    cv2 = None
+try:
+    from wand.image import Image as WandImage
+except ImportError:
+    WandImage = None
+try:
+    from pgmagick import Image as PGImage, FilterTypes, Blob, Geometry
+except ImportError:
+    PGImage = None
+try:
+    from pyvips import Image as VipsImage
+except ImportError:
+    VipsImage = None
 
 
-imagename = './pictures/cover.jpg'
+imagename = sys.argv[1]
+
+
+def deferred_noop():
+    time.sleep(.2)
 
 
 def deferred_pillow():
@@ -49,13 +71,29 @@ def deferred_vips():
     im.write_to_buffer('.jpeg', Q=85)
 
 
-start = time.time()
-t = threading.Thread(target=deferred_wand)
-t.start()
-n = 0
 
-while t.isAlive():
-    time.sleep(.001)
-    n += 1
+def test_deferred(deferred):
+    start = time.time()
+    t = threading.Thread(target=deferred)
+    t.start()
+    n = 0
 
-print '>>>', time.time() - start, n
+    while t.isAlive():
+        time.sleep(.0001)
+        n += 1
+
+    print('>>> {:<20} time: {:1.3f}s  {:>4} switches'.format(
+        deferred.__name__, time.time() - start, n))
+
+
+test_deferred(deferred_noop)
+if not Image is None:
+    test_deferred(deferred_pillow)
+if not cv2 is None:
+    test_deferred(deferred_opencv)
+if not WandImage is None:
+    test_deferred(deferred_wand)
+if not PGImage is None:
+    test_deferred(deferred_pgmagick)
+if not VipsImage is None:
+    test_deferred(deferred_vips)
