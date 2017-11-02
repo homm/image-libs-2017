@@ -65,17 +65,16 @@
 <body class="shower list">
 
 	<header class="caption">
-		<h1>Работа с изображениями на Python в 2017 году</h1>
+		<h1>Image processing in 2017</h1>
 	</header>
 
 	<!--section class="slide" id="cover" style="background-size: 1024px; background-image: url(./pictures/cover.markup.png)"-->
 	<section class="slide" id="cover">
 		<img src="./pictures/cover.png" alt="" width="180">
 		<h2>
-			Работа с изображениями<br>
-			на Python в 2017 году
+			Image processing in 2017
 		</h2>
-		<p>Александр Карпинский, Uploadcare</p>
+		<p>Alexander Karpinsky, Uploadcare</p>
 		<style>
 		#cover {
 			color: rgb(23,23,23);
@@ -97,93 +96,93 @@
 	</section>
 
 	<section class="slide">
-		<h2>O себе</h2>
+		<h2>About me</h2>
 		<p>
-			Член команды <a href="https://python-pillow.org/">Pillow</a>.
+			<a href="https://python-pillow.org/">Pillow</a>'s team member.
 		</p>
 		<p>
-			Автор <a href="https://github.com/uploadcare/pillow-simd">Pillow-SIMD</a>.
+			<a href="https://github.com/uploadcare/pillow-simd">Pillow-SIMD</a> author.
 		</p>
 	</section>
 
 	<section class="slide">
-		<h2>Чем занимаюсь</h2>
+		<h2>What I do</h2>
 		<p>
-			Сервис обработки картинок на лету в Uploadcare.
+			On-the-fly image processing service in Uploadcare.
 		</p>
 		<ul>
-			<li>Высокая производительность</li>
-			<li>Надежность</li>
-			<li>Масштабируемость</li>
-			<li>Построен на Pillow</li>
+			<li>High performance</li>
+			<li>Reliability</li>
+			<li>Scalability</li>
+			<li>Build on top of Pillow</li>
 		</ul>
 	</section>
 
 
 
 	<section class="slide gap">
-		<h2>Библиотеки</h2>
+		<h2>Libraries</h2>
 	</section>
 
 	<section class="slide">
 		<h2>Pillow</h2>
 		<ul>
-			<li>Форк PIL (Python Imaging Library). 1995 год
-			<li>Нативное расширение для Python
-			<li>Версии Python: 2.7, 3.3+, pypy, pypy3
+			<li>PIL fork (Python Imaging Library). Est. 1995
+			<li>Python's native extension
+			<li>Supported versions: 2.7, 3.3+, pypy, pypy3
 		</ul>
-		<p>Сайт: <a href="https://python-pillow.org/">python-pillow.org</a></p>
+		<p><a href="https://python-pillow.org/">python-pillow.org</a></p>
 	</section>
 
 	<section class="slide">
 		<h2>Pillow-SIMD</h2>
 		<ul>
-			<li>C мая 2016 года
+			<li>Since May 2016
 			<li>Drop-in replacement for Pillow
-			<li>Инструкции SSE4 (по умолчанию) и AVX2
+			<li>Instruction sets: SSE4 (by default), AVX2
 		</ul>
-		<p>Сайт: <a href="https://github.com/uploadcare/pillow-simd">github.com/uploadcare/pillow-simd</a></p>
+		<p><a href="https://github.com/uploadcare/pillow-simd">github.com/uploadcare/pillow-simd</a></p>
 	</section>
 
 	<section class="slide">
 		<h2>OpenCV</h2>
 		<ul>
-			<li>Расшифровывается Open Computer Vision. 2000 год
-			<li>Биндинг на Python входит в комплект и очень популярен
-			<li>Версии Python: 2.7, 3.4+, пока без pypy
+			<li>Stands for Open Computer Vision. Est. 2000
+			<li>Binding for Python is included and very famous
+			<li>Supported versions: 2.7, 3.4+. No pypy support
 		</ul>
-		<p>Сайт: <a href="https://opencv.org/">opencv.org</a></p>
+		<p><a href="https://opencv.org/">opencv.org</a></p>
 	</section>
 
 	<section class="slide">
 		<h2>VIPS</h2>
 		<ul>
-			<li>1993 год, обогнала своё время
-			<li>Биндинг pyvips поддерживается автором
-			<li>Версии Python: 2.7, 3.3+, pypy, pypy3
+			<li>Est. 1993. Ahead of it's time
+			<li>Binding "pyvips", supported by author
+			<li>Supported versions: 2.7, 3.3+, pypy, pypy3
 		</ul>
-		<p>Сайт: <a href="https://jcupitt.github.io/libvips/">jcupitt.github.io/libvips/</a></p>
+		<p><a href="https://jcupitt.github.io/libvips/">jcupitt.github.io/libvips/</a></p>
 	</section>
 
 	<section class="slide">
 		<h2>ImageMagick &amp; GraphicsMagick</h2>
 		<ul>
-			<li>Очень популярная библиотека. 1990 год
-			<li>Биндинг Wand использует ctypes, проект заброшен
-			<li>Биндинг pgmagick использует Boost.Python, не работает в pypy
+			<li>Very famous libraries. Est. 1990
+			<li>Binding "Wand", based on ctypes, looks abandoned
+			<li>Binding "pgmagick", based on Boost.Python, doesn't work in pypy
 		</ul>
-		<p>Сайт: <a href="https://www.imagemagick.org/">imagemagick.org</a>,
+		<p><a href="https://www.imagemagick.org/">imagemagick.org</a>,
 			<a href="http://graphicsmagick.org">graphicsmagick.org</a></p>
 	</section>
 
 
 
 	<section class="slide gap">
-		<h2>Производительность</h2>
+		<h2>Performance</h2>
 	</section>
 
 	<section class="slide">
-		<h2>Почему важно проверять результат</h2>
+		<h2>Always check the output</h2>
 		<pre>
 			<code>from PIL import Image, ImageFilter.BoxBlur</code>
 			<code>im.filter(ImageFilter.BoxBlur(<mark>3</mark>))</code>
@@ -197,7 +196,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>В чем проблема?</h2>
+		<h2>What's wrong?</h2>
 		<pre>
 			<code>cv2.GaussianBlur(im, (window, window), radius)</code>
 		</pre>
@@ -213,7 +212,7 @@
 		</div>
 	</section>
 	<section class="slide">
-		<h2>В чем проблема?</h2>
+		<h2>What's wrong?</h2>
 		<pre>
 			<code>im.filter(ImageFilter.GaussianBlur(radius))</code>
 		</pre>
@@ -230,53 +229,53 @@
 	</section>
 
 	<section class="slide">
-		<h2>Скорость ресайза в Pillow, Mpx/s</h2>
+		<h2>Resampling speed in Pillow, Mpx/s</h2>
 		<img src="./pictures/perf1.png" height="400">
 	</section>
 	<section class="slide">
-		<h2>Скорость ресайза в Pillow, Mpx/s</h2>
+		<h2>Resampling speed in Pillow, Mpx/s</h2>
 		<img src="./pictures/perf2.png" height="400">
 	</section>
 	<section class="slide">
-		<h2>Скорость ресайза в Pillow, Mpx/s</h2>
+		<h2>Resampling speed in Pillow, Mpx/s</h2>
 		<img src="./pictures/perf3.png" height="400">
 	</section>
 	<section class="slide">
-		<h2>Скорость ресайза в Pillow, Mpx/s</h2>
+		<h2>Resampling speed in Pillow, Mpx/s</h2>
 		<img src="./pictures/perf4.png" height="400">
 	</section>
 
 	<section class="slide">
-		<h2>Ускорение в Pillow-SIMD</h2>
+		<h2>Acceleration in Pillow-SIMD</h2>
 		<ul>
-			<li>Ресайз: от <mark>4</mark> до <mark>7</mark> раз</li>
-			<li>Размытие: <mark>2,8</mark> раз</li>
-			<li>Применение ядра 3x3 или 5x5: <mark>11</mark> раз</li>
-			<li>Умножение и деление на альфа-канал: в <mark>4</mark> и <mark>10</mark> раза</li>
-			<li>Альфа-композиция: <mark>5</mark> раз</li>
-			<li>Еще что-то по мелочи</li>
+			<li>Resampling: from <mark>4</mark> to <mark>7</mark> times</li>
+			<li>Gaussian blur: <mark>2.8</mark> times</li>
+			<li>Kernel filter 3×3 or 5×5: <mark>11</mark> times</li>
+			<li>Multiplication and division by alpha channel: <mark>4</mark> and <mark>10</mark> times</li>
+			<li>Alpha compositing: <mark>5</mark> times</li>
+			<li>And counting…</li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Какой-то набор операций, Mpx/s</h2>
-		<p>Загрузка, поворот на 90°, уменьшение в 2,5 раза, размытие, запись в JPEG.</p>
+		<h2>Some operations sequence, Mpx/s</h2>
+		<p>Load, rotate by 90°, shrink in 2.5 times, blur, save to JPEG file.</p>
 		<img src="./pictures/perf5.png" height="330">
 	</section>
 	<section class="slide">
-		<h2>Какой-то набор операций, Mpx/s</h2>
-		<p>Если подождать и собрать самому.</p>
+		<h2>Some operations sequence, Mpx/s</h2>
+		<p>Results if you are ready to invest some time.</p>
 		<img src="./pictures/perf6.png" height="330">
 	</section>
 
 	<section class="slide">
-		<h2>Набор бенчмарков</h2>
+		<h2>Benchmarking framework</h2>
 		<p>
-			<b>Страница с результатами</b><br>
+			<b>Results page</b><br>
 			<a href="https://python-pillow.org/pillow-perf/">https://python-pillow.org/pillow-perf/</a>
 		</p>
 		<p>
-			<b>Фреймворк для тестирования</b><br>
+			<b>Benchmarks sources</b><br>
 			<a href="https://github.com/python-pillow/pillow-perf">https://github.com/python-pillow/pillow-perf</a>
 		</p>
 	</section>
@@ -298,62 +297,62 @@
 
 
 	<section class="slide gap">
-		<h2>Параллельная работа</h2>
+		<h2>Concurrent working</h2>
 	</section>
 
 	<section class="slide">
-		<h2>Метрики производительности</h2>
+		<h2>Performance metrics</h2>
 		<ul>
-			<li><b>Реальное время выполнения одной операций</b><br>
-				Важно на десктопе.
+			<li><b>The real time for one operation execution</b><br>
+				Important on desktops.
 			</li>
-			<li><b>Пропускная способность потока операций</b><br>
-				Становится более важным на сервере.
+			<li><b>Throughput of operations flow</b><br>
+				Becomes more important on servers.
 			</li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Способы параллельной работы</h2>
+		<h2>Concurrent working levels</h2>
 		<ol>
-			<li class="non-zero" data-counter="1">На уровне приложения</li>
+			<li class="non-zero" data-counter="1">Application level</li>
 		</ol>
 		<p>
-			Реальное время выполнения не меняется.<br>
-			Пропускная способность растет пропорционально количеству ядер.
+			The real time doesn't change.<br>
+			Throughput grows in proportion to the number of cores.
 		</p>
 	</section>
 
 	<section class="slide">
-		<h2>Способы параллельной работы</h2>
+		<h2>Concurrent working levels</h2>
 		<ol>
-			<li class="non-zero" data-counter="2">На уровне графических операций</li>
+			<li class="non-zero" data-counter="2">Graphical operation level</li>
 		</ol>
 		<p>
-			Реальное время выполнения уменьшается.<br>
-			Пропускная способность растет далеко не линейно от количества ядер.
+			The real time shrinks.<br>
+			Throughput grows <b>not</b> in proportion to the number of cores.
 		</p>
 	</section>
 
 	<section class="slide">
-		<h2>Способы параллельной работы</h2>
+		<h2>Concurrent working levels</h2>
 		<ol>
-			<li class="non-zero" data-counter="3">На уровне команд процессора и данных (SIMD)</li>
+			<li class="non-zero" data-counter="3">Data and CPU instructions level (SIMD)</li>
 		</ol>
 		<p>
-			Реальное время выполнения уменьшается.<br>
-			Пропускная способность растет.<br>
+			The real time shrinks.<br>
+			Throughput grows.<br>
 			Win-win.
 		</p>
 	</section>
 
 	<section class="slide">
-		<h2>Как совместить параллельную работу</h2>
+		<h2>Methods combinations</h2>
 		<div class="puzzles">
 			<img src="./pictures/puzzle4.png" style="opacity: 0.8;">
 			<span style="top: 80px; left: 30px; font-size: 40px;">SIMD</span>
-			<span style="left: 190px; width: 170px; top: 20px;">внутри операций</span>
-			<span style="top: 230px; width: 170px; left: 20px;">внутри приложения</span>
+			<span style="left: 190px; width: 170px; top: 20px;">operations level</span>
+			<span style="top: 230px; width: 170px; left: 20px;">applications level</span>
 		</div>
 		<style type="text/css">
 			.puzzles {
@@ -369,29 +368,29 @@
 	</section>
 
 	<section class="slide">
-		<h2>Многопоточность</h2>
+		<h2>Multithreading</h2>
 		<p>
-			<b>Отпускают GIL</b><br>
+			<b>Release GIL</b><br>
 			Pillow, OpenCV, pyvips, Wand
 		</p>
-		<p><b>Не отпускает</b><br>
+		<p><b>Doesn't release</b><br>
 			pgmagick</p>
 	</section>
 
 	<section class="slide">
-		<h2>Правило N + 1</h2>
+		<h2>N + 1 rule</h2>
 		<p>
-			Создавать для обработки <mark>не более</mark> N + 1 воркеров,<br>
-			где N — количество ядер или потоков процессора.
+			Create <mark>not more</mark> than N + 1 workers,<br>
+			where N is a number of CPU cores or threads.
 		</p>
-		<p>Воркер — процесс или поток, занятый обработкой.</p>
+		<p>Worker — a process or thread working on processing.</p>
 	</section>
 
 	<section class="slide">
-		<h2>Асинхронная работа</h2>
+		<h2>Asynchronous work</h2>
 		<p>
-			Долгая работа процессора блокирует event loop,<br>
-			даже если библиотека отпускает GIL.
+			The imaging operations execution blocks event loop,<br>
+			even if a library releases GIL.
 		</p>
 		<pre>
 			<code>@gen.coroutine</code>
@@ -402,7 +401,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Асинхронная работа</h2>
+		<h2>Asynchronous work</h2>
 		<pre>
 			<code>@run_on_executor(executor=ThreadPoolExecutor(<mark>1</mark>))</code>
     	<code>def process_image(self, ...):</code>
@@ -418,7 +417,7 @@
 
 
 	<section class="slide gap">
-		<h2>Ввод/Вывод</h2>
+		<h2>File input/output</h2>
 	</section>
 
 	<!--section class="slide">
@@ -432,7 +431,7 @@
 	</section-->
 
 	<section class="slide">
-		<h2>Ленивая загрузка</h2>
+		<h2>Lazy loading</h2>
 		<pre>
 			<code>>>> from PIL import Image</code>
 			<code>>>> <mark>%time</mark> im = Image.open('cover.jpg')</code>
@@ -443,7 +442,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Ленивая загрузка</h2>
+		<h2>Lazy loading</h2>
 		<pre>
 			<code>>>> from PIL import Image</code>
 			<code>>>> <mark>%time</mark> im = Image.open('cover.jpg')</code>
@@ -456,7 +455,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Режим битых картинок</h2>
+		<h2>Broken images mode</h2>
 		<pre>
 			<code>from PIL import Image</code>
 			<code>Image.open('trucated.jpg').save('trucated.out.jpg')</code>
@@ -465,7 +464,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Режим битых картинок</h2>
+		<h2>Broken images mode</h2>
 		<pre>
 			<code>from PIL import Image, ImageFile</code>
 			<code>ImageFile.<mark>LOAD_TRUNCATED_IMAGES</mark> = True</code>
@@ -485,35 +484,35 @@
 				<th width="20%">IM</th>
 			</tr>
 			<tr>
-				<td>Количество кодеков</td>
+				<td>Codecs number</td>
 				<td>17</td>
 				<td>12+</td>
 				<td>8</td>
 				<td>66</td>
 			</tr>
 			<tr>
-				<td>Битые картинки</td>
+				<td>Broken images</td>
 				<td>✅</td>
 				<td>✅</td>
 				<td>✅</td>
 				<td>✅</td>
 			</tr>
 			<tr>
-				<td>Ленивая загрузка</td>
+				<td>Lazy loading</td>
 				<td>✅</td>
 				<td>✅</td>
 				<td>❌</td>
 				<td>❌</td>
 			</tr>
 			<tr>
-				<td>Чтение EXIF и ICC</td>
+				<td>EXIF and ICC reading</td>
 				<td>✅</td>
 				<td>✅</td>
 				<td>❌</td>
 				<td>✅</td>
 			</tr>
 			<tr>
-				<td>Автоповорот EXIF</td>
+				<td>Auto rotation based on EXIF</td>
 				<td>❌</td>
 				<td>✅</td>
 				<td>✅</td>
@@ -523,23 +522,23 @@
 	</section>
 
 	<section class="slide">
-		<h2>Особенности OpenCV</h2>
+		<h2>OpenCV specialities</h2>
 		<pre>
 			<code>cv2.imread(filename)</code>
 		</pre>
 		<ul>
-			<li>Поворачивает JPEG-файлы в соответствии с EXIF
-			<li>Игнорирует альфа-канал у PNG-файлов
+			<li>Auto rotates JPEG files based on EXIF
+			<li>Ignores alpha channel for PNG files
 		</ul>
 	</section>
 	<section class="slide">
-		<h2>Особенности OpenCV</h2>
+		<h2>OpenCV specialities</h2>
 		<pre>
 			<code>cv2.imread(filename, flags=<mark>cv2.IMREAD_UNCHANGED</mark>)</code>
 		</pre>
 		<ul>
-			<li>Оставляет альфа-канал у PNG-файлов
-			<li>Перестает поворачивать JPEG-файлы
+			<li>Keeps alpha channel for PNG files
+			<li>Stops automatic rotation based on EXIF
 		</ul>
 	</section>
 	<!--section class="slide">
@@ -555,25 +554,25 @@
 	</section-->
 
 	<section class="slide">
-		<h2>Почему так?</h2>
+		<h2>OpenCV, why?</h2>
 		<ul>
-			<li>Мало кодеков</li>
-			<li>Нет ленивой загрузки</li>
-			<li>Нет доступа к EXIF и ICC</li>
-			<li>Странное флаги</li>
+			<li>Few codecs</li>
+			<li>No lazy loading</li>
+			<li>No access to EXIF and ICC</li>
+			<li>Odd flags</li>
 		</ul>
-		<p>OpenCV не рассчитан на работу с непроверенными источниками.</p>
+		<p>OpenCV isn't intended for work with untrusted sources..</p>
 	</section>
 
 	<section class="slide">
-		<h2>Решение</h2>
+		<h2>Solution</h2>
 		<img src="./pictures/apple.jpg" style="height: 250px; margin: 20px 80px 0;">
 		<img src="./pictures/pen.png" style="height: 280px;">
 	</section>
 
 	<section class="slide">
-		<h2>Решение</h2>
-		<p>Изображение в OpenCV — это массив numpy.</p>
+		<h2>Solution</h2>
+		<p>OpenCV images are numpy arrays.</p>
 		<pre>
 			<code>import numpy</code>
 			<code>from PIL import Image</code>
@@ -584,7 +583,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Решение</h2>
+		<h2>Solution</h2>
 		<pre>
 			<code>import numpy</code>
 			<code>from PIL import Image</code>
@@ -595,9 +594,9 @@
 	</section>
 
 	<section class="slide gap">
-		<h2 style="margin: 80px 0;">Вопросы</h2>
-		<p>Презентация: <a href="https://homm.github.io/image-libs-2017/">homm.github.io/image-libs-2017/</a></p>
-		<p>Написать: <a href="mailto:homm86@gmail.com">homm86@gmail.com</a></p>
+		<h2 style="margin: 80px 0;">Questions</h2>
+		<p>Slides: <a href="https://homm.github.io/image-libs-2017/">homm.github.io/image-libs-2017/</a></p>
+		<p>Email: <a href="mailto:ak@uploadcare.com">ak@uploadcare.com</a></p>
 	</section>
 
 
