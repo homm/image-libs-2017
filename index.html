@@ -96,12 +96,12 @@
 	</section>
 
 	<section class="slide">
-		<h2>About me</h2>
+		<h2>About myself</h2>
 		<p>
-			<a href="https://python-pillow.org/">Pillow</a>'s team member.
+			<a href="https://python-pillow.org/">Pillow</a> core team member.
 		</p>
 		<p>
-			<a href="https://github.com/uploadcare/pillow-simd">Pillow-SIMD</a> author.
+			Maker of the <a href="https://github.com/uploadcare/pillow-simd">Pillow-SIMD</a> library.
 		</p>
 	</section>
 
@@ -114,7 +114,7 @@
 			<li>High performance</li>
 			<li>Reliability</li>
 			<li>Scalability</li>
-			<li>Build on top of Pillow</li>
+			<li>Built on top of Pillow-SIMD</li>
 		</ul>
 	</section>
 
@@ -127,8 +127,8 @@
 	<section class="slide">
 		<h2>Pillow</h2>
 		<ul>
-			<li>PIL fork (Python Imaging Library). Est. 1995
-			<li>Python's native extension
+			<li>PIL fork (Python Imaging Library). Founded in 1995
+			<li>Native extension for Python
 			<li>Supported versions: 2.7, 3.3+, pypy, pypy3
 		</ul>
 		<p><a href="https://python-pillow.org/">python-pillow.org</a></p>
@@ -147,8 +147,8 @@
 	<section class="slide">
 		<h2>OpenCV</h2>
 		<ul>
-			<li>Stands for Open Computer Vision. Est. 2000
-			<li>Binding for Python is included and very famous
+			<li>Stands for Open Computer Vision. Founded in 2000
+			<li>Includes a popular Python binding
 			<li>Supported versions: 2.7, 3.4+. No pypy support
 		</ul>
 		<p><a href="https://opencv.org/">opencv.org</a></p>
@@ -157,8 +157,8 @@
 	<section class="slide">
 		<h2>VIPS</h2>
 		<ul>
-			<li>Est. 1993. Ahead of it's time
-			<li>Binding "pyvips", supported by author
+			<li>Founded in 1993, ahead of its time
+			<li>The "pyvips" binding is supported by the author
 			<li>Supported versions: 2.7, 3.3+, pypy, pypy3
 		</ul>
 		<p><a href="https://jcupitt.github.io/libvips/">jcupitt.github.io/libvips/</a></p>
@@ -167,9 +167,9 @@
 	<section class="slide">
 		<h2>ImageMagick &amp; GraphicsMagick</h2>
 		<ul>
-			<li>Very famous libraries. Est. 1990
-			<li>Binding "Wand", based on ctypes, looks abandoned
-			<li>Binding "pgmagick", based on Boost.Python, doesn't work in pypy
+			<li>Well-known libraries. Founded in 1990
+			<li>The "Wand" binding is based on ctypes and looks abandoned
+			<li>The "pgmagick" is based on Boost.Python. Doesn't work in pypy
 		</ul>
 		<p><a href="https://www.imagemagick.org/">imagemagick.org</a>,
 			<a href="http://graphicsmagick.org">graphicsmagick.org</a></p>
@@ -182,7 +182,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Always check the output</h2>
+		<h2>Always check your output</h2>
 		<pre>
 			<code>from PIL import Image, ImageFilter.BoxBlur</code>
 			<code>im.filter(ImageFilter.BoxBlur(<mark>3</mark>))</code>
@@ -196,7 +196,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>What's wrong?</h2>
+		<h2>The problem</h2>
 		<pre>
 			<code>cv2.GaussianBlur(im, (window, window), radius)</code>
 		</pre>
@@ -212,7 +212,7 @@
 		</div>
 	</section>
 	<section class="slide">
-		<h2>What's wrong?</h2>
+		<h2>The problem</h2>
 		<pre>
 			<code>im.filter(ImageFilter.GaussianBlur(radius))</code>
 		</pre>
@@ -246,9 +246,9 @@
 	</section>
 
 	<section class="slide">
-		<h2>Acceleration in Pillow-SIMD</h2>
+		<h2>Pillow-SIMD speeds up</h2>
 		<ul>
-			<li>Resampling: from <mark>4</mark> to <mark>7</mark> times</li>
+			<li>Resampling: <mark>4 — 7</mark> times</li>
 			<li>Gaussian blur: <mark>2.8</mark> times</li>
 			<li>Kernel filter 3×3 or 5×5: <mark>11</mark> times</li>
 			<li>Multiplication and division by alpha channel: <mark>4</mark> and <mark>10</mark> times</li>
@@ -258,13 +258,13 @@
 	</section>
 
 	<section class="slide">
-		<h2>Some operations sequence, Mpx/s</h2>
-		<p>Load, rotate by 90°, shrink in 2.5 times, blur, save to JPEG file.</p>
+		<h2>Some sequence of operations, Mpx/s</h2>
+		<p>Load, rotate by 90°, reduce 2.5 times, apply blur, save to JPEG.</p>
 		<img src="./pictures/perf5.png" height="330">
 	</section>
 	<section class="slide">
-		<h2>Some operations sequence, Mpx/s</h2>
-		<p>Results if you are ready to invest some time.</p>
+		<h2>Some sequence of operations, Mpx/s</h2>
+		<p>Results when you invest some time.</p>
 		<img src="./pictures/perf6.png" height="330">
 	</section>
 
@@ -275,7 +275,7 @@
 			<a href="https://python-pillow.org/pillow-perf/">https://python-pillow.org/pillow-perf/</a>
 		</p>
 		<p>
-			<b>Benchmarks sources</b><br>
+			<b>Benchmark sources</b><br>
 			<a href="https://github.com/python-pillow/pillow-perf">https://github.com/python-pillow/pillow-perf</a>
 		</p>
 	</section>
@@ -303,10 +303,10 @@
 	<section class="slide">
 		<h2>Performance metrics</h2>
 		<ul>
-			<li><b>The real time for one operation execution</b><br>
+			<li><b>Actual execution time for one operation execution</b><br>
 				Important on desktops.
 			</li>
-			<li><b>Throughput of operations flow</b><br>
+			<li><b>Operations flow throughput</b><br>
 				Becomes more important on servers.
 			</li>
 		</ul>
@@ -318,7 +318,7 @@
 			<li class="non-zero" data-counter="1">Application level</li>
 		</ol>
 		<p>
-			The real time doesn't change.<br>
+			Actual execution time doesn't change.<br>
 			Throughput grows in proportion to the number of cores.
 		</p>
 	</section>
@@ -329,7 +329,7 @@
 			<li class="non-zero" data-counter="2">Graphical operation level</li>
 		</ol>
 		<p>
-			The real time shrinks.<br>
+			Actual execution time lowers.<br>
 			Throughput grows <b>not</b> in proportion to the number of cores.
 		</p>
 	</section>
@@ -340,19 +340,19 @@
 			<li class="non-zero" data-counter="3">Data and CPU instructions level (SIMD)</li>
 		</ol>
 		<p>
-			The real time shrinks.<br>
+			Actual execution time lowers.<br>
 			Throughput grows.<br>
 			Win-win.
 		</p>
 	</section>
 
 	<section class="slide">
-		<h2>Methods combinations</h2>
+		<h2>Combining methods</h2>
 		<div class="puzzles">
 			<img src="./pictures/puzzle4.png" style="opacity: 0.8;">
 			<span style="top: 80px; left: 30px; font-size: 40px;">SIMD</span>
-			<span style="left: 190px; width: 170px; top: 20px;">operations level</span>
-			<span style="top: 230px; width: 170px; left: 20px;">applications level</span>
+			<span style="left: 190px; width: 170px; top: 20px;">operation<br>level</span>
+			<span style="top: 230px; width: 170px; left: 20px;">application<br>level</span>
 		</div>
 		<style type="text/css">
 			.puzzles {
@@ -378,18 +378,18 @@
 	</section>
 
 	<section class="slide">
-		<h2>N + 1 rule</h2>
+		<h2>The N + 1 rule</h2>
 		<p>
 			Create <mark>not more</mark> than N + 1 workers,<br>
 			where N is a number of CPU cores or threads.
 		</p>
-		<p>Worker — a process or thread working on processing.</p>
+		<p>Worker — a process or thread doing the processing.</p>
 	</section>
 
 	<section class="slide">
 		<h2>Asynchronous work</h2>
 		<p>
-			The imaging operations execution blocks event loop,<br>
+			Executing imaging operations blocks event loop,<br>
 			even if a library releases GIL.
 		</p>
 		<pre>
@@ -484,7 +484,7 @@
 				<th width="20%">IM</th>
 			</tr>
 			<tr>
-				<td>Codecs number</td>
+				<td>Number of codecs</td>
 				<td>17</td>
 				<td>12+</td>
 				<td>8</td>
@@ -505,7 +505,7 @@
 				<td>❌</td>
 			</tr>
 			<tr>
-				<td>EXIF and ICC reading</td>
+				<td>Reading EXIF and ICC</td>
 				<td>✅</td>
 				<td>✅</td>
 				<td>❌</td>
@@ -522,23 +522,23 @@
 	</section>
 
 	<section class="slide">
-		<h2>OpenCV specialities</h2>
+		<h2>OpenCV quirks</h2>
 		<pre>
 			<code>cv2.imread(filename)</code>
 		</pre>
 		<ul>
 			<li>Auto rotates JPEG files based on EXIF
-			<li>Ignores alpha channel for PNG files
+			<li>Ignores alpha channel in PNG files
 		</ul>
 	</section>
 	<section class="slide">
-		<h2>OpenCV specialities</h2>
+		<h2>OpenCV quirks</h2>
 		<pre>
 			<code>cv2.imread(filename, flags=<mark>cv2.IMREAD_UNCHANGED</mark>)</code>
 		</pre>
 		<ul>
-			<li>Keeps alpha channel for PNG files
-			<li>Stops automatic rotation based on EXIF
+			<li>Preserves alpha channel in PNG files
+			<li>Stops EXIF-based autorotation
 		</ul>
 	</section>
 	<!--section class="slide">
@@ -561,7 +561,7 @@
 			<li>No access to EXIF and ICC</li>
 			<li>Odd flags</li>
 		</ul>
-		<p>OpenCV isn't intended for work with untrusted sources..</p>
+		<p>OpenCV is not designed to work with untrusted sources.</p>
 	</section>
 
 	<section class="slide">
