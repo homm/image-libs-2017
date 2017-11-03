@@ -54,11 +54,11 @@
 
 	<!--section class="slide" id="cover" style="background-size: 1024px; background-image: url(./pictures/cover.markup.png)"-->
 	<section class="slide" id="cover">
-		<img src="./pictures/cover.png" alt="" width="180">
-		<h2>
+		<img src="./pictures/cover.svg" alt="">
+		<!--h2>
 			Image processing in 2017
 		</h2>
-		<p>Alexander Karpinsky, Uploadcare</p>
+		<p>Alexander Karpinsky, Uploadcare</p-->
 		<style>
 		#cover {
 			color: rgb(23,23,23);
@@ -66,7 +66,12 @@
 			#cover:after {
 				display: none;
 				}
-			#cover h2 {
+			#cover img {
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%;
+			}
+			/*#cover h2 {
 				margin: 42px 0 0;
 				font-size: 60px;
 				line-height: 1.1;
@@ -75,7 +80,7 @@
 			#cover p {
 				margin: 30px 0 0;
 				font-size: 30px;
-				}
+				}*/
 		</style>
 	</section>
 
